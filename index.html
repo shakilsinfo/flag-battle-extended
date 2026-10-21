@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flag Battle</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="vignette"></div>
+
+    <div id="hud" class="overlay hidden">
+      <div class="hud-box">
+        <div class="hud-label">Flags Remaining</div>
+        <div class="hud-alive" id="hud-alive">195</div>
+        <div class="hud-timer">
+          <span id="hud-elapsed">00:00</span>
+          <span class="hud-target" id="hud-target">/ 60:00</span>
+        </div>
+        <div class="hud-progress"><div class="hud-progress-fill" id="hud-progress-fill"></div></div>
+      </div>
+    </div>
+
+    <div id="feed" class="overlay hidden">
+      <div class="feed-header">Eliminations</div>
+      <div class="feed-list" id="feed-list"></div>
+    </div>
+
+    <div id="toasts" class="overlay"></div>
+
+    <div id="intro" class="overlay">
+      <div class="intro-inner">
+        <div class="intro-kicker">195 FLAGS &bull; ONE CHAMPION</div>
+        <h1 class="intro-title">FLAG<span class="intro-title-accent">BATTLE</span></h1>
+        <div class="intro-loading" id="intro-loading">
+          <div class="intro-loading-label" id="intro-loading-label">Loading flags&hellip;</div>
+          <div class="intro-progress"><div class="intro-progress-fill" id="intro-progress-fill"></div></div>
+        </div>
+        <div class="intro-countdown hidden" id="intro-countdown">5</div>
+        <div class="intro-sub" id="intro-sub">The floor is about to open&hellip;</div>
+      </div>
+    </div>
+
+    <div id="champion" class="overlay hidden">
+      <canvas id="confetti"></canvas>
+      <div class="champion-inner">
+        <div class="champion-kicker">Champion</div>
+        <img class="champion-flag" id="champion-flag" alt="Champion flag" />
+        <div class="champion-name" id="champion-name">&nbsp;</div>
+        <div class="champion-stats" id="champion-stats">&nbsp;</div>
+        <button class="champion-restart" id="champion-restart" type="button">BATTLE AGAIN</button>
+      </div>
+    </div>
+
+    <div id="debug" class="overlay hidden"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
